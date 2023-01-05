@@ -1,0 +1,18 @@
+import numpy as np
+
+A=np.random.randint(1,9,size=(3,3))
+B=np.random.randint(1,9,size=(3,3))
+print("matrix A is \n{}".format(A))
+print("matrix A is \n {}".format(B))
+
+At=np.transpose(A)
+print("A transpose is \n{}".format(At))
+Bt=np.transpose(B)
+print("B transpose is\n {}".format(Bt))
+
+t1=np.matmul(A,At)
+t2=np.matmul(B,Bt)
+t3=np.multiply(t2,2)
+
+
+print("result is : \n{}".format(np.subtract(t1,t3)))
